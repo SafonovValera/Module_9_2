@@ -14,7 +14,7 @@ second_result = [(x, y) for x in first_strings for y in second_strings if len(x)
 # В переменную third_result запишите словарь созданный при помощи сборки, где парой ключ-значение будет строка-длина
 # строки. Значения строк будут перебираться из объединённых вместе списков first_strings и second_strings. Условие
 # записи пары в словарь - чётная длина строки.
-third_result = {x: len(y) for x in first_strings for y in second_strings}
+third_result = {x: len(x) for x in first_strings + second_strings if not len(x) %2}
 # Пример результата выполнения программы:
 # Пример выполнения кода:
 print(first_result)
